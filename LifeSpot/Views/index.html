@@ -4,39 +4,47 @@
     <meta charset="UTF-8">
     <title>LifeSpot</title>
     <link rel="stylesheet" href="../Static/CSS/index.css" type="text/css">
+    <script type="text/javascript" src="../Static/JS/index.js"></script>
+    <script>
+        // Проверка на возраст
+        //checkAge();
+        
+        // сохранение сессии
+        handleSession()
+        
+        // вывод данных сессии в консоль
+        sessionLog();
+     
+        // функция для получения пользовательского ввода    
+        const inputParseFunction = function(){
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+    </script>
 </head>
+
+<!--SIDEBAR-->
 <body>
 
-    <header class="header-main bordered">
+    <header class="header-main bordered" id="header-index">
         <h1>LifeSpot - прямые трансляции с улиц</h1>
         <p>Покажем, что происходит прямо сейчас</p>
-        <input class="search" type="text" placeholder="Поиск...">
+        <input class="search" type="text" placeholder="Поиск..." size=50% oninput="filterContent()">
     </header>
 
     <main>     
         <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE?si=NRHIzaBHFsO1lv7X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p class="video-title">Лондон</p>
+        <h3 class="video-title">Лондон</h3>
         </div>
         
         <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/5jcrMjEnYu0?si=HkslYayCgQ14j2c0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p class="video-title">Санкт-Петербург</p>
+        <h3 class="video-title">Санкт-Петербург</h3>
         </div>
         
         <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/vsfEE30aiis?si=tl0P0NL-8YB0paxv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p class="video-title">Нью-Йорк</p>
+        <h3 class="video-title">Нью-Йорк</h3>
         </div>
-        <aside id="sidebar">
-            <div class="navbar">
-                <a href="index.html"><p>Все трансляции</p></a>
-                <a href="index.html"><p>О проекте</p></a>
-            </div>
-        </aside>
     </main>
-    
 
-    <footer>
-        <p>LifeSpot - все права защищены</p>
-        <p>Связаться с нами: contact@lifespot.ru</p>
-    </footer> 
 </body>
+<!--FOOTER-->
 </html>
